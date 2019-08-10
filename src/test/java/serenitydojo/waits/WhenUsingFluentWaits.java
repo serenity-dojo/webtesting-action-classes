@@ -57,6 +57,18 @@ public class WhenUsingFluentWaits {
         assertThat(pageWithWaits.textbox.getText()).isEqualTo("Visible text");
     }
 
+
+    @Test
+    public void waitingForVisibleTextExpectedCondition() {
+        pageWithWaits.waitForCondition()
+                .until(
+                        ExpectedConditions.numberOfElementsToBe(
+                                By.cssSelector("#elements option"), 4
+                        )
+                );
+        assertThat(pageWithWaits.displayedElements()).contains("Earth","Air","Fire","Water");
+    }
+
     @DefaultUrl("classpath:site/index.html")
     public static class APageWithWaits extends PageObject {
 

@@ -6,6 +6,6 @@ import net.serenitybdd.core.pages.PageObject;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class DuckDuckGoResultPage extends PageObject {
-    static final String RESULT_TITLE = "results .result__title";
+public class DuckDuckGoResultPage extends PageObject {
+    public static final String RESULT_TITLE = "results .result__title";
 }
